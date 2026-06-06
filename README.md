@@ -1,2 +1,4 @@
 # srishti-trivedi-java-script-
-code repo for java script 
+java script learning 
+author SRISHTI TRIVEDI
+
