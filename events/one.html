@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+<title>html Events </title>
+</head>
+<body style="background-color:#414141; color: aliceblue;">
+<h2>Amazing image</h2>
+<div >
+<ul id="images">
+<li><img width="200px" id="photoshop" src="https://images.pexels.
+com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&
+cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+<li><img width="200px" id="japan" src="https://images.pexels.com/
+photos/3532553/pexels-photo-3532553.jpeg?auto=compress&
+cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+<li><img width="200px" id="river" src="https://images.pexels.com/
+photos/3532551/pexels-photo-3532551.jpeg?auto=compress&
+cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+<li><img width="200px" id="owl" src="https://images.pexels.com/
+photos/3532552/pexels-photo-3532552.jpeg?auto=compress&
+cs=tinvsrab&w=1600&lazy=load" alt="" ></li>
+<li><a style="color: beige;">href="https://google.com"</a></li>
+</ul>
+
+</div>
+</body>
+    <script>
+//         // document.getElementById('owl').oneclick=function(){
+//             // alert("owl clicked")
+//         // }
+//            // attchEvent() used in early times
+//             // jQuery-on
+//               // types of events-browser and environment 
+//         // timestamp,defaultPrevented,
+//         // target,toElement,srcElement
+//         // clientX,clientY,screenX , screenY
+//         // altkey,ctrlKey,shiftKey,keyCode
+//         document.getElementById('images').addEventListener('click',function(e){
+//             // alert("owl clicked again")
+//            console.log('clicked inside the ul.')
+//         },false)
+//        document.getElementById('owl').addEventListener('click',function(e){
+//             // alert("owl clicked again")
+//            console.log(owl clicked again.)
+//            e.stopPropagation()
+//         },false)
+        
+// // first owl will be printed because of the concept of bubbling this means when we click on a image first ul will be considered and then we will get to se the next event listener.but when we use capturing mode we will get to see the ul line first ths is because capturing goes from top to buttom 
+// document.getElementById('google').addEventListener('click',function(e){
+    
+//     e.preventDefault()
+//       console.log("google clicked.")
+// },false)
+document.querySelector('#images').addEventListener('click',function(e){
+console.log(e.target.parentNode)
+let removeIt = e.target.parentNode
+removeIt.remove()
+// removeIt.parentNode.removeChild(removeIt)
+
+},false)
+
+
+
+
+
+ 
+    </script>
+
+</html>
